@@ -1,0 +1,26 @@
+<form id="main-form">
+	<legend class="page-title">Settings</legend>
+	<label class="wide">
+		<strong>Default currency</strong><br>
+		Select the preferred currency to show the prices in.
+		<select>
+			<option>Euro - €</option>
+			<option>Dollar - $</option>
+		</select>
+	</label>
+	<label class="wide">
+		<strong>Preferred method of method</strong><br>
+		Select whether you want to pay the parking bills on a monlty base or per time. 
+		<select>
+			<option>Yearly (€7.50/transaction)</option>
+			<option>Montly (€2.50/transaction)</option>
+			<option>Weekly (€1.25/transaction)</option>
+			<option>Per time (€0.50/transaction)</option>
+		</select>
+	</label>
+	<label class="wide">
+		<strong>Standard radius (m)</strong><br>
+		Set the default radius to search for parking spot when searching for a spot.
+		<input type="number" name="radius" min="0" step="1" value="1000">
+	</label>
+</form>

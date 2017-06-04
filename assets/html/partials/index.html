@@ -1,0 +1,22 @@
+<h2 class="page-title">Good [daypart], [name]!</h2>
+<form id="main-form" class="page-body">
+	<label class="wide">
+		<strong>Where are you going today?</strong>
+		<input type="text" name="location">
+	</label>
+	<label>
+		<strong>Start time (hh:mm)</strong>
+		<input type="time" name="begintime">
+	</label>
+	<label>
+		<strong>End time (hh:mm)</strong>
+		<input type="time" name="endtime">
+	</label>
+	<label>
+		<strong>Max radius (m)</strong>
+		<input type="number" name="radius" min="0" step="1" value="2500">
+	</label>
+	<label class="wide">
+		<input id="search-submit" class="submit-button" type="submit" value="Localize!" onclick="listParkingLots(event)">
+	</label>
+</form>

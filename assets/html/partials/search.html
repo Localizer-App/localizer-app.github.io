@@ -1,0 +1,24 @@
+<h2 class="page-title">Localize your spot!</h2>
+<section class="page-body">
+	<div><small>Change preferences</small></div>
+	<br>
+	<label>
+		<strong>Sort by</strong>
+		<select data-container="parking-list" onchange="sortResults(this);">
+			<option value="distance">Closest</option>
+			<option value="price">Cheapest</option>
+			<option value="rating">Highest rating</option>
+			<option value="spots">Available spots</option>
+		</select>
+	</label>
+	<br>
+	<template id="template">
+		<li onclick="showParkingLot(this);" class="transaction">
+			<strong></strong>
+			<span class="location"></span>
+			<span class="from"></span>
+			<div class="costs"></div>
+		</li>
+	</template><ol id="parking-list">
+	</ol>
+</section>
