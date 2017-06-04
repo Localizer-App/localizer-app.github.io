@@ -1,7 +1,7 @@
 'use strict';
 
 if ( 'serviceWorker' in navigator ) {
-	navigator.serviceWorker.register('/localizer/sw.js', {scope: '/localizer/'})
+	navigator.serviceWorker.register('/sw.js', {scope: '/'})
 	.then(function(reg) {
 		console.log('Registration succeeded. Scope is ' + reg.scope);
 	}).catch(function(error) {
@@ -72,7 +72,7 @@ function setIndexClass(url) {
 }
 
 function fetchPartial(url) {
-	url = url.replace('localizer/', 'localizer/assets/html/partials/' );
+	url = url.replace('github.io/', 'github.io/assets/html/partials/' );
 
 	return fetch(url, {
 		method: 'GET'
@@ -85,7 +85,7 @@ function generatePartial(data) {
 	let content = document.createElement('div'), template;
 
 	changeUrl(data.template);
-	return fetch(data.template.replace('localizer/', 'localizer/assets/html/partials/' ), {
+	return fetch(data.template.replace('github.io/', 'github.io/assets/html/partials/' ), {
 		method: 'GET'
 	}).then(function(response) {
 		return response.text();
@@ -115,7 +115,6 @@ function pageFadeOut() {
 	return new Promise(function(resolve, reject) {
 		main.addEventListener( 'transitionend', resolve, { once: true } );
 		main.classList.add('transition-page');
-		//resolve();
 	});
 }
 
@@ -131,7 +130,7 @@ function listParkingLots(event) {
 			distance: mainForm[3].value,
 		},
 		func: 'generateParkingLots',
-		template: 'http://localizer/search.html',
+		template: '/search.html',
 	};
 
 	listPage(data);
@@ -196,7 +195,7 @@ function startParking(el) {
 			spots
 		},
 		func: 'navigateParkingLot',
-		template: 'http://localizer/navigate.html',
+		template: '/navigate.html',
 	};
 	
 	listPage(data);
@@ -265,7 +264,7 @@ function startPark(el) {
 	let data = {
 		data: {},
 		func: 'generateStopPark',
-		template: 'http://localizer/rate.html',
+		template: '/rate.html',
 	};
 
 	listPage(data);
