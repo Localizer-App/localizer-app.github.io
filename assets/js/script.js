@@ -130,7 +130,7 @@ function listParkingLots(event) {
 			distance: mainForm[3].value,
 		},
 		func: 'generateParkingLots',
-		template: '/search.html',
+		template: '/assets/html/partials/search.html',
 	};
 
 	listPage(data);
@@ -195,7 +195,7 @@ function startParking(el) {
 			spots
 		},
 		func: 'navigateParkingLot',
-		template: '/navigate.html',
+		template: '/assets/html/partials/navigate.html',
 	};
 	
 	listPage(data);
@@ -264,7 +264,7 @@ function startPark(el) {
 	let data = {
 		data: {},
 		func: 'generateStopPark',
-		template: '/rate.html',
+		template: '/assets/html/partials/rate.html',
 	};
 
 	listPage(data);
