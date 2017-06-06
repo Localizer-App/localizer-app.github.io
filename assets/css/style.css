@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
 	font-family: "Open Sans";
 	src: url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
 		url('../fonts/OpenSans-Semibold.woff') format('woff'),
@@ -20,12 +20,7 @@
 		url('../fonts/OpenSans-Light.woff') format('woff'),
 		url('../fonts/OpenSans-Light.ttf')  format('truetype');
 	font-weight: 300;
-}
-
-:root {
-	--main-color: #ffa029;
-	--padding: 1.2rem;
-}
+}*/
 
 *, ::before, ::after {
 	box-sizing: inherit;
@@ -37,16 +32,16 @@ html {
 }
 
 body {
-	background: var(--main-color);
+	background: #ffa029;
 	color: rgba(237, 255, 253, .9);
 	font: 400 1.6em/1.5 'Segoe UI',-apple-system,BlinkMacSystemFont,'Trebuchet MS',Roboto,Oxygen-Sans,Ubuntu,'Fira Sans',sans-serif;
 	/*font-family: "Open Sans", sans-serif;*/
 	overflow-x: hidden;
-	margin: 0 0 calc(1.5*0.8em + 2*0.8em + var(--padding)*5/2);
+	margin: 0 0 calc(2.8em + 3rem);
 }
 
 main {
-	margin: var(--padding);
+	margin: 1.2rem;
 }
 
 input,
@@ -58,7 +53,7 @@ select {
 	display: block;
 	font: inherit;
 	font-weight: 400;
-	padding: calc(var(--padding)/2);
+	padding: 0.6rem;
 	width: 100%;
 }
 
@@ -79,7 +74,7 @@ a {
 }
 
 ul {
-	margin: 0 0 var(--padding);
+	margin: 0 0 1.2rem;
 }
 
 label {
@@ -124,7 +119,7 @@ h1 {
 	font-size: 80%;
 	margin: 0;
 	min-height: 0;
-	padding: calc(var(--padding)/2) var(--padding);
+	padding: 0.6rem 1.2rem;
 	transition: min-height 0.225s ease-out;
 }
 
@@ -135,7 +130,7 @@ h1 {
 #main-form {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: var(--padding);
+	grid-gap: 1.2rem;
 }
 
 label.wide {
@@ -147,7 +142,7 @@ label.wide {
 	align-items: center;
 	background: rgb(253, 252, 252);
 	background: #00b0e9;
-	border-top: calc(var(--padding)/2) solid;
+	border-top: 0.6rem solid;
 	box-shadow: 0 -4px 8px rgba(0,0,0,.1);
 	bottom: 0;
 	display: flex;
@@ -163,7 +158,7 @@ label.wide {
 	flex: 1;
 	flex-direction: column;
 	font-size: 80%;
-	padding: calc(var(--padding)/2);
+	padding: 0.6rem;
 	position: relative;
 	text-align: center;
 }
@@ -173,7 +168,7 @@ label.wide {
 }
 
 .padding {
-	padding: var(--padding);
+	padding: 1.2rem;
 }
 
 .icon {
@@ -183,13 +178,13 @@ label.wide {
 }
 
 .rate {
-	margin-bottom: var(--padding);
+	margin-bottom: 1.2rem;
 	text-align: center;
 }
 
 .rate > .icon {
 	display: inline-block;
-	margin: 0 calc(var(--padding)/2);
+	margin: 0 0.6rem;
 	stroke: currentColor;
 	stroke-width: 2px;
 }
@@ -240,7 +235,7 @@ label.wide {
 label > strong {
 	display: block;
 	font-size: 105%;
-	margin-bottom: calc(var(--padding)/2);
+	margin-bottom: 0.6rem;
 }
 
 .costs {
@@ -309,14 +304,14 @@ img {
 #modal {
 	background: #00b0e9;
 	box-shadow: 0 12px 24px rgba(0,0,0,.3);
-	left: var(--padding);
+	left: 1.2rem;
 	opacity: 0;
 	position: fixed;
 	top: 40%;
 	transform: scale(0.7);
 	transition: all 0.16875s ease-out;
 	visibility: hidden;
-	width: calc(100% - 2*var(--padding));
+	width: calc(100% - 2.4rem);
 	z-index: 99;
 }
 
